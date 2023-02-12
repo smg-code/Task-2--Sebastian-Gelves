@@ -1,0 +1,181 @@
+/*seteo de pagina*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*estilo del contenedor principal*/
+/* margin: 0px auto; centra la page*/
+.contenedor {
+    padding: 0;
+    margin: 0px auto;
+    font-family: cursive; /*toda la letra del contenedro en cursiva*/
+   /* background-color: antiquewhite;*/
+    width: 900px;
+    height: 1200px;
+}
+    /*estilo del encabezado*/
+    /* en este caso dentro del contenedor van
+    dos cajas 
+    1 - titulo principal / con banner con fotos
+    2 - navegacion
+    */
+    header {
+    /* background-color: pink; */
+        width: 900px;
+        height: 200px;
+        position: sticky;/*deja posicionado el header en la cabexera de la paguina*/
+        top: 10px;
+    }
+        .imagen1 {
+            display: none;
+        }
+        .imgbaner1 {
+            background-size: contain;
+            background-image: url(../hockey1.jpg); /*agregar los .. */
+            width: 300px;
+            height: 150px;
+            float: left;
+            
+        }
+        .imgbaner2 {
+            width: 300px;
+            height: 150px;
+            background-size: contain;
+            background-image: url(../hockey2.jpg);
+            float: left;
+        }
+        .imgbaner3 {
+            width: 300px;
+            height: 150px;
+            background-size: contain;
+            background-image: url(../hockey3.jpg);
+            float: left;
+        }
+        /* formato las cajas "a" que estan dentro del nav"*/
+        header a {
+            color: rgb(201, 235, 11); /*color del texto */
+            text-decoration: none; /*saco el subrayado*/
+            background-color: rgb(67, 113, 237);
+            border: 1px solid black;
+            margin: 3px;
+            padding: 3px;
+            position: relative; /*se mueve esta relativa de las paredes de nav*/
+            bottom: 10px;
+            left: 50px;
+            box-shadow: 10px 5px 5px black; /* sombra en la cajas de "a" en el nav*/
+        }
+        /*cambia de color el boton cuando pasa el mouse*/ 
+        header a:hover {
+            background-color: rgb(32, 224, 238);
+        }
+        .activo {
+            background-color: rgb(86, 194, 103);
+        }
+        .activo:hover { 
+            background-color: #14d364;
+        }
+        /*La propiedad CSS float ubica un elemento al lado izquierdo
+        o derecho de su contenedor, permitiendo a los elementos de 
+        texto y en línea aparecer a su costado. El elemento es removido
+        del normal flujo de la página, aunque aún sigue siendo parte 
+        del flujo (a diferencia del posicionamiento absoluto).*/
+        /*uso la propiedad float para que se coloquen uno al lado del otro*/
+        .Titulo {
+            /* background-color: blue;*/
+            text-shadow: 1px 1px 2px yellow; /*sombra en la letra del banner*/
+            color: rgb(0, 3, 3);
+            width: 900px;
+            height: 200px;
+            float: left;
+            font-size: 43px;/*tamaño de letra dentro de Titulo*/
+            position: absolute;
+            top: 40px;
+            left: 150px;
+        }
+        nav {
+            /* background-color: rgb(184, 212, 42);*/
+            width: 900px;
+            height: 50px;
+            float: left;
+        }
+    /* formato titulo 2*/    
+    .Titulo2 {
+        color: rgb(219, 44, 44);
+        background-color: rgb(223, 235, 63);
+        width: 880px;
+    /* height: 38px; */
+        border: 2px solid black; /*borde de titulo 2 */
+        float: left;
+        display: block;
+        text-align: center;
+        margin-bottom: 38px; /*doy margen inferior para separar 
+        la caja section*/
+    }
+    section {
+        display: block;
+        width: 900px;
+        height: 600px;
+    }
+        .logo1 {
+        /* background-color: rgb(226, 37, 176);*/
+            width: 140px;
+            height: 300px;
+            float: left;
+        }
+        .logo {
+            display: none;
+        }
+        .logop {
+            margin: 10px;
+            width: 70px;
+            height: 100px;
+        /* valores predeterminados transform */
+        position: relative; /*para que funcione la animacion*/
+        transition-duration: 2s ;
+        transition-timing-function: ease-in;
+        /* valores predeterminados animaciones */
+        animation-name: caja;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        }
+        .logop:hover {
+            transform: scale(5); /* si paso el mouse sobre el loqo lo agrando*/
+        }
+        @keyframes caja{
+            0%{
+                right:-50px;
+                transform: scale(2) rotate(30deg);/* agranda y rota la imagen en este ciclo*/
+            }
+            33%{
+                right:42px;
+            }
+            66%{
+                right:-50px;
+            }
+            100%{
+                right:42px;
+            }
+        }
+        .art1 {
+        /* background-color: rgb(35, 195, 220);*/
+            width: 740px;
+            height: 100px;
+            float: left;
+        }
+        .art2{
+        /* background-color: rgb(58, 166, 234);*/
+            width: 740px;
+            height: 100px;
+            float: left;
+        }
+        .art3 {
+            /*background-color: rgb(18, 139, 183);*/
+            width: 740px;
+            height: 100px;
+            float: left;
+        }
+            /* le doy sangria al texto*/
+            .texto {
+                        text-indent: 1em; 
+                    }
