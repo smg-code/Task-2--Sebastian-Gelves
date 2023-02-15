@@ -4,6 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+table,td,th,tr {
+    border: 1px solid black;
+}
 /*estilo del contenedor principal*/
 /* margin: 0px auto; centra la page*/
 .contenedor {
